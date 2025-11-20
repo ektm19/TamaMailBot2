@@ -63,7 +63,7 @@ def handle_start(message):
         bot.send_message(admin, f"<b>🚀 New User Joined The Bot\n\nUser Id : {user_id}\n\nFirst Name: {fname}\n\nLast name: {lname}</b>")
         open(f"{users_directory}{user_id}.json", "w").close()
 
-    mess = f"<b>😀 Hey {fname} Welcome To the @{bot.get_me().username}\n\nBot Created By : @prime_Nepcoder</b>"
+    mess = f"<b>😀 Hey {fname} Welcome To the @{bot.get_me().username}\n\nBot Deployed By : @ektm19</b>"
     keyboard_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, selective=True)
     keyboard_markup.row("🚀 My Email")
     keyboard_markup.row("📧 Generate New Email", "📨 Inbox")
@@ -130,7 +130,7 @@ def bot_status(message):
     usr = int(open("admin/total.txt").read())
     img_url = "https://quickchart.io/chart?bkg=white&c={'type':'bar','data':{'labels':[''],'datasets':[{'label':'Total-Users','data':[" + str(usr) + "]},{'label':'Total-Mail Created','data':[" + str(tmail) + "]}]}}"
 
-    caption = f"📊 Bot Live Stats 📊\n\n⚙ Total Email Generated : {tmail}\n✅️ Total Users : {usr}\n\n🔥 By: @DEVSNP"
+    caption = f"📊 Bot Live Stats 📊\n\n⚙ Total Email Generated : {tmail}\n✅️ Total Users : {usr}\n\n🔥 By: @ektm19"
     bot.send_photo(user_id, img_url, caption=caption)
 
 
